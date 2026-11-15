@@ -7,7 +7,7 @@ var active_customizer: Control = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print("ENTRO A MISION 2")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,6 +20,7 @@ func _on_orbitas_pressed() -> void:
 
 
 func _on_rover_pressed() -> void:
+	print("CLICK EN ROVER")
 	_open_customizer(ROVER_CUSTOMIZER_SCENE)
 
 

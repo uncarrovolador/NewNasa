@@ -48,11 +48,11 @@ offset_bottom = 437.0
 
 [node name="orbitas" type="Button" parent="." unique_id=1714853568]
 layout_mode = 0
-offset_left = -435.0
-offset_top = 140.0
-offset_right = 98.80615
-offset_bottom = 355.96313
-rotation = -0.08593072
+offset_left = -356.8159
+offset_top = 132.85468
+offset_right = 81.39734
+offset_bottom = 362.36902
+rotation = -0.09113803
 scale = Vector2(0.8212944, 1.245533)
 pivot_offset = Vector2(1591.0538, 87.685135)
 

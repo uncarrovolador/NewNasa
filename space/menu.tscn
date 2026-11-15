@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cj5m5143ev378" path="res://menu.gd" id="1_ouk20"]
 [ext_resource type="Texture2D" uid="uid://b5xbpj0djbdvk" path="res://TA.png" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://dt2cphvsxdr1x" path="res://Fondos/FondoTitulo.png" id="3_4hy44"]
+[ext_resource type="Texture2D" uid="uid://bhnnn08uy0rd7" path="res://Titulo.png" id="4_ytr4m"]
 
 [node name="menu" type="Control" unique_id=2120161090]
 layout_mode = 3
@@ -17,12 +19,31 @@ position = Vector2(582.44446, 335.5)
 scale = Vector2(0.60462964, 0.60462964)
 texture = ExtResource("2_ouk20")
 
+[node name="Titulo" type="TextureRect" parent="." unique_id=1027356360]
+layout_mode = 0
+offset_left = -22.999998
+offset_top = -8.999999
+offset_right = 5977.0
+offset_bottom = 3366.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_4hy44")
+
+[node name="TextureRect" type="TextureRect" parent="Titulo" unique_id=117921226]
+layout_mode = 0
+offset_left = 299.99997
+offset_top = -539.99994
+offset_right = 4816.0
+offset_bottom = 3976.0
+texture = ExtResource("4_ytr4m")
+
 [node name="play" type="Button" parent="." unique_id=1787851676]
 layout_mode = 0
 offset_left = 497.0
 offset_top = 434.0
 offset_right = 665.0
 offset_bottom = 491.0
+theme_override_font_sizes/font_size = 20
+text = "PLAY"
 
 [node name="credits" type="Button" parent="." unique_id=197765398]
 layout_mode = 0
@@ -30,5 +51,7 @@ offset_left = 498.0
 offset_top = 509.0
 offset_right = 665.0
 offset_bottom = 568.0
+theme_override_font_sizes/font_size = 20
+text = "CREDITS"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
