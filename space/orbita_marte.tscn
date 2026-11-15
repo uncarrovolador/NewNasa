@@ -10,3 +10,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v2oru")
+
+[node name="Button" type="Button" parent="." unique_id=296166009]
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 10.0
+offset_right = 1117.0
+offset_bottom = 67.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

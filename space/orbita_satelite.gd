@@ -656,3 +656,8 @@ func dibujar_satelite(pos: Vector2) -> void:
 		3,
 		Color.ORANGE
 	)
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://mision_1.tscn")
+	pass # Replace with function body.

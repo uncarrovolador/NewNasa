@@ -899,3 +899,8 @@ func dibujar_nave(pos: Vector2) -> void:
 		Rect2(pos + derecha - Vector2(5, 3), Vector2(10, 6)),
 		Color.DODGER_BLUE
 	)
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://mision_3.tscn")
+	pass # Replace with function body.
