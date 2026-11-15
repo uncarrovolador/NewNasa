@@ -3,6 +3,62 @@
 [ext_resource type="Script" uid="uid://b3y22h8vxgfk1" path="res://mision_2.gd" id="1_62t6e"]
 [ext_resource type="Texture2D" uid="uid://h6r4dp4gybyq" path="res://OFICINA.png" id="2_62t6e"]
 [ext_resource type="Texture2D" uid="uid://ca1eb8i6haeai" path="res://cohete.jpg" id="2_fis2x"]
+[ext_resource type="Texture2D" uid="uid://rsk3hvbta5ni" path="res://Fondos/Imagen 15-11-26 a las 3.43 p.m. (1).png" id="3_kowo8"]
+[ext_resource type="Texture2D" uid="uid://be33qqrgjbstx" path="res://Fondos/Imagen 15-11-26 a las 3.44 p.m. (1).png" id="4_ara0e"]
+[ext_resource type="Texture2D" uid="uid://b3sp671ae383j" path="res://Fondos/Imagen 15-11-26 a las 3.43 p.m..png" id="6_051vk"]
+[ext_resource type="Texture2D" uid="uid://bu00fmhxisla5" path="res://Fondos/Imagen 15-11-26 a las 3.44 p.m..png" id="7_3eteo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_852rp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2k08d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg4vc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ym0q1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymmpt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa2fo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nq2kj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e8olq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_um738"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0d3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cuew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfnuc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77p5d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5d8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c00oa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvk1l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0jl0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lh1g5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kror2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_67hdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d28vv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yice"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4mgk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ypcn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vy2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7id5a"]
 
 [node name="mision2" type="Control" unique_id=1541858817]
 layout_mode = 3
@@ -20,10 +76,31 @@ texture = ExtResource("2_fis2x")
 region_enabled = true
 region_rect = Rect2(0, 0, 1365, 632)
 
+[node name="Imagen151126ALas3_43P_m_(1)" type="Sprite2D" parent="." unique_id=2050699328]
+position = Vector2(577, 310.00003)
+scale = Vector2(0.9788136, 0.67277485)
+texture = ExtResource("3_kowo8")
+
+[node name="Imagen151126ALas3_44P_m_(1)" type="Sprite2D" parent="." unique_id=896763010]
+position = Vector2(130.79399, 353.75122)
+rotation = -0.22058302
+scale = Vector2(0.7015546, 0.6888719)
+texture = ExtResource("4_ara0e")
+
 [node name="Oficina" type="Sprite2D" parent="." unique_id=659827543]
 position = Vector2(569.1111, 318.25)
 scale = Vector2(0.1877037, 0.1877037)
 texture = ExtResource("2_62t6e")
+
+[node name="Imagen151126ALas3_43P_m_" type="Sprite2D" parent="." unique_id=1942014741]
+position = Vector2(983.82355, 371)
+scale = Vector2(0.52941173, 0.5294118)
+texture = ExtResource("6_051vk")
+
+[node name="Imagen151126ALas3_44P_m_" type="Sprite2D" parent="." unique_id=1497918393]
+position = Vector2(985.28345, 133)
+scale = Vector2(0.45454547, 0.45454547)
+texture = ExtResource("7_3eteo")
 
 [node name="nave2" type="Button" parent="." unique_id=62505080]
 layout_mode = 0
@@ -31,6 +108,11 @@ offset_left = 863.0
 offset_top = 47.0
 offset_right = 1111.0
 offset_bottom = 230.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_852rp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2k08d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fg4vc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ym0q1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymmpt")
 
 [node name="rover" type="Button" parent="." unique_id=1121888341]
 layout_mode = 0
@@ -38,6 +120,11 @@ offset_left = 867.0
 offset_top = 270.0
 offset_right = 1112.0
 offset_bottom = 481.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sa2fo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nq2kj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e8olq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_um738")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w0d3f")
 
 [node name="llegadaalaluna" type="Button" parent="." unique_id=144821712]
 layout_mode = 0
@@ -45,6 +132,12 @@ offset_left = 350.0
 offset_top = 179.0
 offset_right = 803.0
 offset_bottom = 437.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6cuew")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qfnuc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_77p5d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t5d8g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c00oa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kvk1l")
 
 [node name="orbitas" type="Button" parent="." unique_id=1714853568]
 layout_mode = 0
@@ -55,6 +148,11 @@ offset_bottom = 362.36902
 rotation = -0.09113803
 scale = Vector2(0.8212944, 1.245533)
 pivot_offset = Vector2(1591.0538, 87.685135)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a0jl0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lh1g5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kror2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_67hdf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d28vv")
 
 [node name="launch" type="Button" parent="." unique_id=1908880649]
 layout_mode = 0
@@ -62,6 +160,11 @@ offset_left = 157.0
 offset_top = 535.0
 offset_right = 264.0
 offset_bottom = 594.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2yice")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4mgk5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4ypcn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6vy2i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7id5a")
 
 [connection signal="pressed" from="nave2" to="." method="_on_nave_2_pressed"]
 [connection signal="pressed" from="rover" to="." method="_on_rover_pressed"]

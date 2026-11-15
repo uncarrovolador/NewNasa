@@ -4,6 +4,36 @@
 [ext_resource type="Texture2D" uid="uid://ca58057bdjr6c" path="res://bocetomision1.png" id="2_uxfdg"]
 [ext_resource type="Texture2D" uid="uid://dx1jycsfs8jyh" path="res://MISIONES_G.jpg" id="3_4v5xr"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tbyc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51spi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqc72"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6pptu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0x3kv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivja0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4ioc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eryxe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pam2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3t2k3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqpni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8khq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1w5n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1h8cy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ows2l"]
+
 [node name="seleccionmision" type="Control" unique_id=317629625]
 layout_mode = 3
 anchors_preset = 15
@@ -50,6 +80,11 @@ offset_left = 20.0
 offset_top = 106.0
 offset_right = 375.0
 offset_bottom = 647.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7tbyc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_51spi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xqc72")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6pptu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0x3kv")
 
 [node name="mission2" type="Button" parent="." unique_id=854300694]
 layout_mode = 1
@@ -60,6 +95,11 @@ offset_left = 414.0
 offset_top = 108.0
 offset_right = 750.936
 offset_bottom = 636.224
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ivja0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_l4ioc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eryxe")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pam2y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3t2k3")
 
 [node name="mission3" type="Button" parent="." unique_id=48303160]
 layout_mode = 0
@@ -67,6 +107,11 @@ offset_left = 781.0
 offset_top = 106.0
 offset_right = 1135.0
 offset_bottom = 641.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cqpni")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a8khq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_n1w5n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1h8cy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ows2l")
 
 [connection signal="pressed" from="regreso" to="." method="_on_regreso_pressed"]
 [connection signal="pressed" from="mission1" to="." method="_on_mission_1_pressed"]
