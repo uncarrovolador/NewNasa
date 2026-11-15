@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bhg0gxhwkb8qu"]
 
-[ext_resource type="Script" uid="uid://cj5m5143ev378" path="res://menu.gd" id="1_hvw4c"]
-[ext_resource type="Texture2D" uid="uid://b5xbpj0djbdvk" path="res://TA.png" id="2_sodtn"]
+[ext_resource type="Texture2D" uid="uid://bamm8wg5p760k" path="res://Fondos/Retro Pixel Milky Way Starfield.png" id="1_8jl5v"]
+[ext_resource type="Script" uid="uid://dryfw630jqsc3" path="res://space_customizer/scenes/CustomizerUI.gd" id="1_hvw4c"]
 
-[node name="menu" type="Control" unique_id=2120161090]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xmqh"]
+bg_color = Color(0.511689, 0.5731671, 0.8993499, 1)
+
+[node name="CustomizerBase" type="Control" unique_id=1933018179]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,23 +15,242 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hvw4c")
 
-[node name="Ta" type="Sprite2D" parent="." unique_id=709522107]
-position = Vector2(582.44446, 335.5)
-scale = Vector2(0.60462964, 0.60462964)
-texture = ExtResource("2_sodtn")
-
-[node name="play" type="Button" parent="." unique_id=1787851676]
+[node name="Background" type="TextureRect" parent="." unique_id=1492144376]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 434.0
-offset_right = 665.0
-offset_bottom = 491.0
+offset_right = 1173.0
+offset_bottom = 663.0
+texture = ExtResource("1_8jl5v")
 
-[node name="credits" type="Button" parent="." unique_id=197765398]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1670297937]
 layout_mode = 0
-offset_left = 498.0
-offset_top = 509.0
-offset_right = 665.0
-offset_bottom = 568.0
+offset_left = 26.0
+offset_top = 45.0
+offset_right = 1156.0
+offset_bottom = 569.0
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
 
-[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[node name="MainLayout" type="HBoxContainer" parent="MarginContainer" unique_id=888485208]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftColumn" type="VBoxContainer" parent="MarginContainer/MainLayout" unique_id=1088868128]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/MainLayout/LeftColumn" unique_id=330798537]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="MarginContainer/MainLayout/LeftColumn/TopBar" unique_id=1701308420]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "x
+"
+
+[node name="Spacer" type="Control" parent="MarginContainer/MainLayout/LeftColumn" unique_id=1582461141]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoPanel" type="PanelContainer" parent="MarginContainer/MainLayout/LeftColumn" unique_id=1310802122]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="InfoVBox" type="VBoxContainer" parent="MarginContainer/MainLayout/LeftColumn/InfoPanel" unique_id=864498663]
+layout_mode = 2
+
+[node name="ComponentNameLabel" type="Label" parent="MarginContainer/MainLayout/LeftColumn/InfoPanel/InfoVBox" unique_id=1043736011]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Component"
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/MainLayout/LeftColumn/InfoPanel/InfoVBox" unique_id=43661610]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/MainLayout/LeftColumn/InfoPanel/InfoVBox" unique_id=768266372]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "Description"
+fit_content = true
+
+[node name="CenterColumn" type="HBoxContainer" parent="MarginContainer/MainLayout" unique_id=1110386097]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="LeftArrows" type="VBoxContainer" parent="MarginContainer/MainLayout/CenterColumn" unique_id=829614162]
+layout_mode = 2
+
+[node name="PrevBtn0" type="Button" parent="MarginContainer/MainLayout/CenterColumn/LeftArrows" unique_id=1074573371]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<"
+
+[node name="PrevBtn1" type="Button" parent="MarginContainer/MainLayout/CenterColumn/LeftArrows" unique_id=2126638941]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<"
+
+[node name="PrevBtn2" type="Button" parent="MarginContainer/MainLayout/CenterColumn/LeftArrows" unique_id=79084048]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<"
+
+[node name="PrevBtn3" type="Button" parent="MarginContainer/MainLayout/CenterColumn/LeftArrows" unique_id=267440177]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<"
+
+[node name="PreviewStack" type="Control" parent="MarginContainer/MainLayout/CenterColumn" unique_id=1916485209]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PartTexture1" type="TextureRect" parent="MarginContainer/MainLayout/CenterColumn/PreviewStack" unique_id=596400125]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PartTexture2" type="TextureRect" parent="MarginContainer/MainLayout/CenterColumn/PreviewStack" unique_id=1513427294]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PartTexture0" type="TextureRect" parent="MarginContainer/MainLayout/CenterColumn/PreviewStack" unique_id=1756947169]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PartTexture3" type="TextureRect" parent="MarginContainer/MainLayout/CenterColumn/PreviewStack" unique_id=850098598]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="RightArrows" type="VBoxContainer" parent="MarginContainer/MainLayout/CenterColumn" unique_id=819686954]
+layout_mode = 2
+
+[node name="NextBtn0" type="Button" parent="MarginContainer/MainLayout/CenterColumn/RightArrows" unique_id=389775057]
+layout_mode = 2
+size_flags_vertical = 3
+text = ">
+"
+
+[node name="NextBtn1" type="Button" parent="MarginContainer/MainLayout/CenterColumn/RightArrows" unique_id=957575666]
+layout_mode = 2
+size_flags_vertical = 3
+text = ">
+"
+
+[node name="NextBtn2" type="Button" parent="MarginContainer/MainLayout/CenterColumn/RightArrows" unique_id=896746071]
+layout_mode = 2
+size_flags_vertical = 3
+text = ">
+"
+
+[node name="NextBtn3" type="Button" parent="MarginContainer/MainLayout/CenterColumn/RightArrows" unique_id=1840077167]
+layout_mode = 2
+size_flags_vertical = 3
+text = ">
+"
+
+[node name="RightColumn" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1786266648]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+
+[node name="StatsVBox" type="VBoxContainer" parent="MarginContainer/MainLayout/RightColumn" unique_id=1685636452]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="MassLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=1803623687]
+layout_mode = 2
+text = "Mass"
+
+[node name="MassBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=1754135514]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
+
+[node name="PowerLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=1027900145]
+layout_mode = 2
+text = "Power"
+
+[node name="PowerBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=953721201]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
+
+[node name="BudgetLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=971147822]
+layout_mode = 2
+text = "Budget"
+
+[node name="BudgetBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=471603758]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
+
+[node name="DataLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=37785071]
+layout_mode = 2
+text = "Data"
+
+[node name="DataBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=1964427369]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
+
+[node name="CommsLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=254495871]
+layout_mode = 2
+text = "Comms"
+
+[node name="CommsBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=1825404623]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=631785120]
+layout_mode = 2
+text = "Time"
+
+[node name="TimeBar" type="ProgressBar" parent="MarginContainer/MainLayout/RightColumn/StatsVBox" unique_id=990665736]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_1xmqh")
+show_percentage = false
