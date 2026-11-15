@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://u4n6eblp0b4y"]
+
+[ext_resource type="Texture2D" uid="uid://cf0tics8epfsv" path="res://piso-lunar.jpg" id="1_d5p0x"]
+[ext_resource type="Texture2D" uid="uid://ijo4mp3shccb" path="res://PiedraLunar.png" id="2_whuqn"]
+[ext_resource type="Script" uid="uid://sqdb8qh65cy8" path="res://punto_interes.gd" id="3_nytja"]
+[ext_resource type="Texture2D" uid="uid://xj5tqonrcwt4" path="res://PuntoInteres.png" id="4_cq5d8"]
+[ext_resource type="PackedScene" uid="uid://2nsjykv2v1ck" path="res://roversito.tscn" id="5_d3iul"]
+[ext_resource type="Script" uid="uid://ct38it72fou1o" path="res://roversito.gd" id="6_m4w7l"]
+[ext_resource type="Texture2D" uid="uid://c4dhj6jjcr7qh" path="res://Postlanzamiento.png" id="7_8r4ln"]
+[ext_resource type="Script" uid="uid://7gu3bbkr4148" path="res://hud.gd" id="8_aqyrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8wy8"]
+size = Vector2(28, 495)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_choid"]
+size = Vector2(34, 571)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mvk3"]
+size = Vector2(1021, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qslr8"]
+size = Vector2(939, 32.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkeu6"]
+radius = 456.95563
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqlns"]
+radius = 47.598583
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyelc"]
+radius = 61.164707
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3vuq"]
+radius = 21.633308
+
+[sub_resource type="LabelSettings" id="LabelSettings_0fo2p"]
+font_size = 11
+
+[node name="POSTLANZAMIENTO" type="Node" unique_id=846926638]
+
+[node name="PisoLunar" type="Sprite2D" parent="." unique_id=1087112419]
+position = Vector2(632, 311.5)
+scale = Vector2(0.7333333, 0.6840696)
+texture = ExtResource("1_d5p0x")
+
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1765902191]
+
+[node name="Pared-Izq" type="CollisionShape2D" parent="Limites" unique_id=451258879]
+position = Vector2(181, 337)
+shape = SubResource("RectangleShape2D_w8wy8")
+
+[node name="Pared-Der" type="CollisionShape2D" parent="Limites" unique_id=78091782]
+position = Vector2(1092, 313.5)
+shape = SubResource("RectangleShape2D_choid")
+
+[node name="Pared-Arr" type="CollisionShape2D" parent="Limites" unique_id=656921088]
+position = Vector2(595.5, 32.5)
+shape = SubResource("RectangleShape2D_2mvk3")
+
+[node name="Pared-Aba" type="CollisionShape2D" parent="Limites" unique_id=1212478145]
+position = Vector2(636.5, 588.625)
+shape = SubResource("RectangleShape2D_qslr8")
+
+[node name="Piedra1" type="StaticBody2D" parent="." unique_id=328071315 groups=["obstaculos"]]
+
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra1" unique_id=1537987639]
+position = Vector2(532, 133)
+scale = Vector2(0.0633831, 0.06347197)
+texture = ExtResource("2_whuqn")
+
+[node name="Piedra1" type="CollisionShape2D" parent="Piedra1" unique_id=1801793469]
+position = Vector2(532.51746, 133)
+scale = Vector2(0.113979846, 0.09798432)
+shape = SubResource("CircleShape2D_lkeu6")
+
+[node name="Piedra2" type="StaticBody2D" parent="." unique_id=2061568799 groups=["obstaculos"]]
+position = Vector2(533, 134)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra2" unique_id=690696030]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.528956, 0.528956)
+texture = ExtResource("2_whuqn")
+
+[node name="Piedra2" type="CollisionShape2D" parent="Piedra2" unique_id=1605467393]
+position = Vector2(-1230.4807, 1875.2998)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("CircleShape2D_dqlns")
+
+[node name="Piedra3" type="StaticBody2D" parent="." unique_id=799500328 groups=["obstaculos"]]
+position = Vector2(988.00006, 67)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra3" unique_id=893988918]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.8075065, 0.8075065)
+texture = ExtResource("2_whuqn")
+
+[node name="Piedra3" type="CollisionShape2D" parent="Piedra3" unique_id=2033742869]
+position = Vector2(-1195.387, 1875.3)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("CircleShape2D_jyelc")
+
+[node name="Piedra4" type="StaticBody2D" parent="." unique_id=1621282214 groups=["obstaculos"]]
+position = Vector2(762.00006, 302)
+scale = Vector2(0.113979846, 0.09798432)
+
+[node name="PiedraLunar" type="Sprite2D" parent="Piedra4" unique_id=2122527413]
+position = Vector2(-1219.514, 1867.6458)
+scale = Vector2(0.8075065, 0.8075065)
+texture = ExtResource("2_whuqn")
+
+[node name="Piedra4" type="CollisionShape2D" parent="Piedra4" unique_id=541421171]
+position = Vector2(-1195.387, 1875.3)
+scale = Vector2(8.773481, 10.205714)
+shape = SubResource("CircleShape2D_jyelc")
+
+[node name="PuntoInteres1" type="Area2D" parent="." unique_id=512576604]
+position = Vector2(954, 443)
+script = ExtResource("3_nytja")
+tipo_interaccion = "exploracion"
+
+[node name="PuntoInteres1" type="Sprite2D" parent="PuntoInteres1" unique_id=1402189576]
+position = Vector2(-1.000061, 1.0000305)
+scale = Vector2(0.062499948, 0.06249994)
+texture = ExtResource("4_cq5d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres1" unique_id=1268721311]
+shape = SubResource("CircleShape2D_p3vuq")
+
+[node name="Label" type="Label" parent="PuntoInteres1" unique_id=50472063]
+visible = false
+offset_left = -44.99994
+offset_top = 18.0
+offset_right = 52.00006
+offset_bottom = 34.0
+text = "Press E to interact"
+label_settings = SubResource("LabelSettings_0fo2p")
+
+[node name="PuntoInteres2" type="Area2D" parent="." unique_id=82693185]
+position = Vector2(288, 504)
+script = ExtResource("3_nytja")
+
+[node name="PuntoInteres1" type="Sprite2D" parent="PuntoInteres2" unique_id=1888132217]
+position = Vector2(-1.000061, 1.0000305)
+scale = Vector2(0.062499948, 0.06249994)
+texture = ExtResource("4_cq5d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres2" unique_id=675787047]
+shape = SubResource("CircleShape2D_p3vuq")
+
+[node name="Label" type="Label" parent="PuntoInteres2" unique_id=141888417]
+visible = false
+offset_left = -44.99994
+offset_top = 18.0
+offset_right = 52.00006
+offset_bottom = 34.0
+text = "Press E to interact"
+label_settings = SubResource("LabelSettings_0fo2p")
+
+[node name="PuntoInteres3" type="Area2D" parent="." unique_id=2037643206]
+position = Vector2(819, 110)
+script = ExtResource("3_nytja")
+tipo_interaccion = "escaneo"
+
+[node name="PuntoInteres1" type="Sprite2D" parent="PuntoInteres3" unique_id=1150338156]
+position = Vector2(-1.000061, 1.0000305)
+scale = Vector2(0.062499948, 0.06249994)
+texture = ExtResource("4_cq5d8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuntoInteres3" unique_id=839656508]
+shape = SubResource("CircleShape2D_p3vuq")
+
+[node name="Label" type="Label" parent="PuntoInteres3" unique_id=1160105003]
+visible = false
+offset_left = -44.99994
+offset_top = 18.0
+offset_right = 52.00006
+offset_bottom = 34.0
+text = "Press E to interact"
+label_settings = SubResource("LabelSettings_0fo2p")
+
+[node name="Postlanzamiento" type="Sprite2D" parent="." unique_id=1980943356]
+position = Vector2(580.1111, 319.375)
+scale = Vector2(0.19118519, 0.19118519)
+texture = ExtResource("7_8r4ln")
+
+[node name="roversito" parent="." unique_id=1302248953 instance=ExtResource("5_d3iul")]
+position = Vector2(289, 84)
+scale = Vector2(0.10257776, 0.10257776)
+script = ExtResource("6_m4w7l")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=677378327]
+offset_right = 6000.0
+offset_bottom = 3375.0
+scale = Vector2(0.19562724, 0.19562724)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1763435631]
+script = ExtResource("8_aqyrp")
+
+[node name="PanelObjetivos" type="PanelContainer" parent="HUD" unique_id=204746532]
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 280.0
+offset_bottom = 280.0
+
+[node name="ContenidoObjetivos" type="VBoxContainer" parent="HUD/PanelObjetivos" unique_id=116627332]
+layout_mode = 2
+
+[node name="BotonContraerObjetivos" type="Button" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1571386929]
+layout_mode = 2
+
+[node name="TituloObjetivos" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=515498567]
+layout_mode = 2
+text = "OBJETIVOS DE MISIÓN"
+
+[node name="NombreMision" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=36215180]
+layout_mode = 2
+text = "	Misión en curso"
+
+[node name="Objetivo1" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=1373735657]
+layout_mode = 2
+text = "○ Explorar el área"
+
+[node name="Objetivo2" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=292410394]
+layout_mode = 2
+text = "	○ Completar análisis"
+
+[node name="Objetivo3" type="Label" parent="HUD/PanelObjetivos/ContenidoObjetivos" unique_id=442679745]
+layout_mode = 2
+text = "	○ Registrar resultados"
+
+[node name="PanelEstadoRover" type="PanelContainer" parent="HUD" unique_id=1232666446]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 60.0
+offset_right = -20.0
+offset_bottom = 300.0
+grow_horizontal = 0
+
+[node name="ContenidoEstado" type="VBoxContainer" parent="HUD/PanelEstadoRover" unique_id=405703542]
+layout_mode = 2
+
+[node name="BotonContraerEstado" type="Button" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=2079085827]
+layout_mode = 2
+
+[node name="TituloEstado" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1103031775]
+layout_mode = 2
+text = "ESTADO DEL ROVER"
+
+[node name="BarraIntegridad" type="ProgressBar" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1188140257]
+layout_mode = 2
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextoBateria" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=1833338121]
+layout_mode = 2
+text = "	Batería: Pendiente"
+
+[node name="TextoComunicaciones" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=2042085938]
+layout_mode = 2
+text = "	Comunicaciones: Pendiente"
+
+[node name="TextoAlmacenamiento" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=703670520]
+layout_mode = 2
+text = "	Almacenamiento: Pendiente"
+
+[node name="TextoTiempo" type="Label" parent="HUD/PanelEstadoRover/ContenidoEstado" unique_id=447843677]
+layout_mode = 2
+text = "	Tiempo restante: Pendiente"
+
+[node name="PanelDerrota" type="PanelContainer" parent="HUD" unique_id=1694266455]
+visible = false
+offset_left = 391.0
+offset_top = 225.0
+offset_right = 748.0
+offset_bottom = 283.0
+
+[node name="Contenido" type="VBoxContainer" parent="HUD/PanelDerrota" unique_id=1797118610]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="HUD/PanelDerrota/Contenido" unique_id=707985159]
+layout_mode = 2
+text = "MISIÓN FALLIDA — ROVER FUERA DE SERVICIO"
+
+[node name="BotonReintentar" type="Button" parent="HUD/PanelDerrota/Contenido" unique_id=1307403680]
+layout_mode = 2
+text = "Reintentar misión"
+
+[node name="PanelVictoria" type="PanelContainer" parent="HUD" unique_id=1699062828]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -38.0
+offset_right = 163.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContenidoVictoria" type="VBoxContainer" parent="HUD/PanelVictoria" unique_id=2058148840]
+layout_mode = 2
+
+[node name="TituloVictoria" type="Label" parent="HUD/PanelVictoria/ContenidoVictoria" unique_id=1800904441]
+layout_mode = 2
+text = "¡MISIÓN EXITOSA!"
+
+[node name="MensajeVictoria" type="Label" parent="HUD/PanelVictoria/ContenidoVictoria" unique_id=752765050]
+layout_mode = 2
+text = "Todos los objetivos han sido completados.
+¡Excelente trabajo, astronauta!"
