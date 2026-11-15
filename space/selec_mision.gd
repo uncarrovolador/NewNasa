@@ -5,10 +5,6 @@ extends Control
 func _ready() -> void:
 	pass
 	
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		print("Clic en: ", event.position, " | Nodo bajo el mouse: ", get_viewport().gui_get_hovered_control())
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
