@@ -4,7 +4,8 @@ signal build_changed
 
 @export_file("*.json") var data_file_path: String = "res://space_customizer/data/simulador_v15.json"
 
-var active_mission_id: String = "MIS_B"
+var active_mission_id: String = "MIS_A" # Cambia entre "MIS_A", "MIS_B" y "MIS_C"
+
 var missions_db: Dictionary = {}
 var parts_by_category: Dictionary = {}
 var all_parts_by_id: Dictionary = {}
@@ -55,8 +56,15 @@ func load_database() -> void:
 func equip_part(category: String, part_id: String) -> void:
 	equipped_ids[category] = part_id
 	build_changed.emit()
+	
+	
 
-
+func set_mission(mission_id: String) -> void:
+	if missions_db.has(mission_id):
+		active_mission_id = mission_id
+		build_changed.emit()
+		
+		
 func get_equipped_part(category: String) -> Dictionary:
 	var id: String = equipped_ids.get(category, "")
 	return all_parts_by_id.get(id, {})
