@@ -1,5 +1,6 @@
 extends Control
 
+
 signal customizer_closed
 
 const ROCKET_CATEGORIES: Array[String] = [
